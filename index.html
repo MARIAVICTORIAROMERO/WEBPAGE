@@ -24,7 +24,6 @@
     --leaf:#2ECC5A;
     --leaf-dark:#22A648;
     --leaf-tint:rgba(46,204,90,0.12);
-    --en-color:#5C7A8A;
   }
 
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -65,24 +64,6 @@
     text-transform:uppercase;
     color:var(--teal);
   }
-
-  /* English translation lines */
-  .en{
-    display:block;
-    font-family:'Inter', sans-serif;
-    font-style:italic;
-    font-weight:400;
-    color:var(--en-color);
-    opacity:0.92;
-    letter-spacing:0;
-    text-transform:none;
-  }
-  h1 .en{font-size:0.42em; margin-top:10px; line-height:1.3;}
-  h2 .en{font-size:0.52em; margin-top:8px; line-height:1.3;}
-  h3 .en{font-size:0.8em; margin-top:4px;}
-  p.en, .service p + .en, .notice p.en{font-size:0.92em; margin-top:4px;}
-  .eyebrow .en{font-size:1em; text-transform:none; margin-top:3px; color:var(--en-color); font-weight:400;}
-  .btn .en{font-size:0.72em; opacity:0.85; margin-top:1px;}
 
   a{color:inherit; text-decoration:none;}
 
@@ -148,13 +129,13 @@
     margin-top:2px;
   }
   nav.links{display:flex; gap:28px; align-items:center;}
-  nav.links a{
+  nav.links a:not(.btn){
     font-size:0.92rem;
     font-weight:500;
     color:var(--ink-soft);
     transition:color .15s;
   }
-  nav.links a:hover, nav.links a:focus-visible{color:var(--teal);}
+  nav.links a:not(.btn):hover, nav.links a:not(.btn):focus-visible{color:var(--teal);}
 
   .btn{
     display:inline-flex;
@@ -177,7 +158,6 @@
     box-shadow:0 2px 0 var(--teal-dark);
   }
   .btn-primary:hover{transform:translateY(-1px); box-shadow:0 3px 0 var(--teal-dark);}
-  .btn-primary .en{color:rgba(255,253,247,0.8);}
   .btn-ghost{
     background:transparent;
     border-color:var(--ink);
@@ -217,7 +197,6 @@
     max-width:48ch;
     margin-bottom:8px;
   }
-  .hero-copy > .en{margin-bottom:22px; max-width:48ch;}
   .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:22px; margin-top:22px;}
   .hero-note{
     font-family:'IBM Plex Mono', monospace;
@@ -229,7 +208,6 @@
     flex-wrap:wrap;
   }
   .hero-note .dot{width:7px; height:7px; border-radius:50%; background:#4C8B5A;}
-  .hero-note .en{display:inline; margin:0 0 0 4px; font-size:0.95rem;}
 
   /* Modern profile card */
   .file{
@@ -291,7 +269,6 @@
   }
   .info-icon svg{width:16px; height:16px; stroke:var(--teal); fill:none; stroke-width:1.8;}
   .info-text{font-weight:600; font-size:0.94rem; padding-top:6px;}
-  .info-text .en{font-size:0.82em; font-weight:400; margin-top:2px;}
 
   /* Relocation highlight banner inside the profile card */
   .relocation-banner{
@@ -318,7 +295,6 @@
     color:var(--leaf-dark);
     font-weight:700;
   }
-  .relocation-banner .en{font-size:0.78rem; margin-top:2px; color:var(--en-color); opacity:0.95;}
 
   .file-tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; align-items:center;}
   .file-tags span{
@@ -332,7 +308,6 @@
   .file-tags .t1{background:var(--teal);}
   .file-tags .t2{background:var(--leaf-dark);}
   .file-tags .t3{background:var(--gold);}
-  .file-tags .en{width:100%; font-family:'Inter',sans-serif; color:var(--en-color); font-size:0.76rem; margin-top:2px;}
 
   .impact-badge{
     position:absolute;
@@ -369,7 +344,6 @@
     font-weight:500;
     color:var(--ink-soft);
   }
-  .trust .en{font-size:0.9em; margin-top:1px;}
   .trust svg{width:15px; height:15px; stroke:var(--teal); margin-top:2px;}
 
   /* ---------- SECTIONS ---------- */
@@ -379,7 +353,6 @@
   .section-head .eyebrow{margin-bottom:12px; display:block;}
   .section-head h2{font-size:clamp(1.7rem, 3vw, 2.3rem); line-height:1.15;}
   .section-head p{color:var(--ink-soft); margin-top:12px; font-size:1.02rem;}
-  .section-head p.en{margin-top:6px;}
 
   .notice{
     position:relative;
@@ -409,7 +382,6 @@
   }
   .notice p + p{margin-top:10px;}
   .notice strong{color:var(--ink);}
-  .notice .en{margin-top:2px; margin-bottom:6px;}
 
   /* Services grid */
   .services-grid{
@@ -448,7 +420,6 @@
   .service .icon svg{width:20px; height:20px; stroke:var(--teal); fill:none; stroke-width:1.6;}
   .service h3{font-size:1.04rem; font-weight:600; margin-bottom:8px; font-family:'Inter',sans-serif;}
   .service p{font-size:0.9rem; color:var(--ink-soft);}
-  .service p.en{margin-bottom:0;}
 
   /* Featured relocation service */
   .service.featured{
@@ -520,7 +491,6 @@
   .for-card:nth-child(3){background:#4F8A78;}
   .for-card h3{color:var(--white); font-size:1.08rem; margin-bottom:10px;}
   .for-card p{color:rgba(255,253,247,0.82); font-size:0.9rem;}
-  .for-card .en{color:rgba(255,253,247,0.68);}
 
   /* Contact */
   .contact-wrap{
@@ -558,7 +528,6 @@
 
   .contact-side h2{margin-bottom:16px;}
   .contact-side p{color:var(--ink-soft); margin-bottom:4px; max-width:44ch;}
-  .contact-side > .en{margin-bottom:22px; max-width:44ch;}
   .zone-tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:22px;}
   .zone-tags span{
     font-family:'IBM Plex Mono', monospace;
@@ -569,7 +538,6 @@
     color:var(--ink-soft);
   }
   .no-calls{font-size:0.86rem; color:var(--ink-soft); margin-bottom:4px;}
-  .no-calls + .en{margin-bottom:18px; font-size:0.8rem;}
 
   /* Footer */
   footer{
@@ -586,7 +554,6 @@
   }
   footer .fname{font-family:'Fraunces', serif; color:var(--white); font-weight:600;}
   footer .fmeta{font-family:'IBM Plex Mono', monospace; font-size:0.72rem;}
-  footer .en{color:rgba(255,253,247,0.5); font-size:0.68rem; margin-top:2px;}
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:880px){
@@ -634,10 +601,10 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="links" id="navLinks">
-      <a href="#servicios" title="Services">Servicios</a>
-      <a href="#como-trabajo" title="How I work">Cómo trabajo</a>
-      <a href="#para-quien" title="Who this is for">Para quién</a>
-      <a href="#contacto" title="Contact">Contacto</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#como-trabajo">Cómo trabajo</a>
+      <a href="#para-quien">Para quién</a>
+      <a href="#contacto">Contacto</a>
       <a href="https://wa.me/34649476651?text=Hola%20Victoria%2C%20necesito%20ayuda%20con..." class="btn btn-primary btn-small">WhatsApp</a>
     </nav>
   </div>
@@ -648,15 +615,14 @@
   <section class="hero" style="padding-bottom:0;">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">Secretaria virtual · Toledo y provincia<span class="en">Virtual assistant · Toledo and province</span></span>
-        <h1>Que el papeleo deje de ser tu problema.<span class="en">Let paperwork stop being your concern.</span></h1>
+        <span class="eyebrow">Secretaria virtual · Toledo y provincia</span>
+        <h1>Que el papeleo deje de ser tu problema.</h1>
         <p>Trámites, gestiones y tareas de oficina resueltas con cercanía, orden y rapidez. Para autónomos, pequeños negocios y particulares que prefieren delegar antes que perder la tarde en colas y formularios.</p>
-        <span class="en">Paperwork, administrative tasks and errands handled with warmth, order and efficiency. For freelancers, small businesses and individuals who would rather delegate than spend an afternoon in queues and paperwork.</span>
         <div class="hero-actions">
-          <a href="https://wa.me/34649476651?text=Hola%20Victoria%2C%20necesito%20ayuda%20con..." class="btn btn-primary">Escríbeme por WhatsApp<span class="en">Contact me on WhatsApp</span></a>
-          <a href="mailto:tusecretariavirtualvictoria@gmail.com" class="btn btn-ghost">Enviar un email<span class="en">Send an email</span></a>
+          <a href="https://wa.me/34649476651?text=Hola%20Victoria%2C%20necesito%20ayuda%20con..." class="btn btn-primary">Escríbeme por WhatsApp</a>
+          <a href="mailto:tusecretariavirtualvictoria@gmail.com" class="btn btn-ghost">Enviar un email</a>
         </div>
-        <div class="hero-note"><span class="dot"></span> <span class="hand" style="font-size:1.4rem;">Límite de respuesta: 48 horas</span><span class="en">Response time: within 48 hours</span></div>
+        <div class="hero-note"><span class="dot"></span> <span class="hand" style="font-size:1.4rem;">Límite de respuesta: 48 horas</span></div>
       </div>
 
       <div class="file">
@@ -675,28 +641,21 @@
 
           <div class="info-row">
             <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
-            <span class="info-text">Toledo capital y provincia
-              <span class="en">Toledo city and province</span>
-            </span>
+            <span class="info-text">Toledo capital y provincia</span>
           </div>
           <div class="info-row">
             <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20v-1.6a3.4 3.4 0 0 0-3.4-3.4H8.4A3.4 3.4 0 0 0 5 18.4V20"/><circle cx="11" cy="8" r="3.4"/><path d="M19 20v-1.6a3.4 3.4 0 0 0-2.2-3.2"/><path d="M15 4.6a3.4 3.4 0 0 1 0 6.6"/></svg></span>
-            <span class="info-text">Autónomos · Pymes · Particulares
-              <span class="en">Freelancers · Small businesses · Individuals</span>
-            </span>
+            <span class="info-text">Autónomos · Pymes · Particulares</span>
           </div>
           <div class="info-row">
             <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
-            <span class="info-text">Respondo en menos de 48 horas
-              <span class="en">I reply within 48 hours</span>
-            </span>
+            <span class="info-text">Respondo en menos de 48 horas</span>
           </div>
 
           <div class="file-tags">
             <span class="t1">#confianza</span>
             <span class="t2">#rapidez</span>
             <span class="t3">#organización</span>
-            <span class="en">#trust · #speed · #organisation</span>
           </div>
         </div>
       </div>
@@ -707,15 +666,15 @@
     <div class="wrap">
       <div class="item">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
-        <span class="txt"><span class="es">Toledo capital y toda la provincia</span><span class="en">Toledo city and the whole province</span></span>
+        <span class="txt"><span class="es">Toledo capital y toda la provincia</span></span>
       </div>
       <div class="item">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
-        <span class="txt"><span class="es">Trato cercano y de confianza</span><span class="en">Warm, trustworthy service</span></span>
+        <span class="txt"><span class="es">Trato cercano y de confianza</span></span>
       </div>
       <div class="item">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
-        <span class="txt"><span class="es">Respuesta rápida por WhatsApp</span><span class="en">Fast replies on WhatsApp</span></span>
+        <span class="txt"><span class="es">Respuesta rápida por WhatsApp</span></span>
       </div>
     </div>
   </div>
@@ -723,92 +682,79 @@
   <section id="servicios">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Qué puedo hacer por ti<span class="en">What I can do for you</span></span>
-        <h2>Un poco de todo lo que te quita tiempo<span class="en">A wide range of tasks handled on your behalf</span></h2>
+        <span class="eyebrow">Qué puedo hacer por ti</span>
+        <h2>Un poco de todo lo que te quita tiempo</h2>
         <p>Si es papeleo, una gestión o una tarea que se puede resolver desde un ordenador o dando un par de pasos por Toledo, lo hablamos y lo saco adelante.</p>
-        <p class="en">If it involves paperwork, an administrative task, or something that can be resolved from a computer or with a short visit around Toledo, please get in touch and I will take care of it.</p>
       </div>
 
       <div class="services-grid">
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="1.5" stroke-linejoin="round"/><path d="M3 9h18"/><path d="M8 2v4M16 2v4"/><circle cx="8" cy="14" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1.1" fill="currentColor" stroke="none"/><circle cx="16" cy="14" r="1.1" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Proyectos puntuales para despachos y pymes<span class="en">One-off projects for firms and small businesses</span></h3>
+          <h3>Proyectos puntuales para despachos y pymes</h3>
           <p>Colaboro con despachos, oficinas y pequeñas empresas que necesitan delegar de forma puntual un proyecto por falta de personal o de tiempo: organización de eventos, reuniones de equipo, comidas de empresa, catering y gestiones similares.</p>
-          <p class="en">I collaborate with firms, offices and small businesses that need to delegate a one-off project due to a shortage of staff or time: organising events, team meetings, company lunches, catering and similar tasks.</p>
         </div>
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z" stroke-linejoin="round"/><path d="M14 3v5h5" stroke-linejoin="round"/><circle cx="15" cy="16" r="3.4"/><path d="m17.4 18.4 1.6 1.6"/></svg></div>
-          <h3>Trámites administrativos<span class="en">Administrative procedures</span></h3>
+          <h3>Trámites administrativos</h3>
           <p>Ayuntamiento, Seguridad Social, Hacienda, DGT... acompañamiento o gestión completa para que no tengas que pedir horas en el trabajo.</p>
-          <p class="en">Town hall, Social Security, Tax Agency, DGT... support or full handling so you do not have to take time off work.</p>
         </div>
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 17V8a1 1 0 0 1 1-1h9v10" stroke-linejoin="round"/><path d="M13 10h4l3 3v4h-7" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div>
-          <h3>Mudanzas<span class="en">House moves</span></h3>
+          <h3>Mudanzas</h3>
           <p>Organización y coordinación de tu mudanza: presupuestos, horarios, empresas de transporte y todo lo que hay que atar antes del gran día.</p>
-          <p class="en">Organising and coordinating your move: quotes, schedules, removal companies and everything that needs sorting before moving day.</p>
         </div>
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="m14.5 6.5-8 8a2.1 2.1 0 0 0 3 3l8-8" stroke-linejoin="round"/><path d="M17 3a4 4 0 0 0 4 4l-2.5 2.5L15 6z" stroke-linejoin="round"/><circle cx="6" cy="18" r="1.6"/></svg></div>
-          <h3>Pequeñas reparaciones<span class="en">Small repairs</span></h3>
+          <h3>Pequeñas reparaciones</h3>
           <p>Coordino y superviso avisos con profesionales de confianza: fontanería, electricidad o mantenimiento del hogar o del negocio.</p>
-          <p class="en">I coordinate and oversee call-outs with trusted professionals: plumbing, electrics or maintenance for your home or business.</p>
         </div>
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 8.5 4.5 6h15L21 8.5v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z" stroke-linejoin="round"/><path d="M3 8.5h18" /><path d="M9 12.5a3 3 0 0 0 6 0"/></svg></div>
-          <h3>Gestión de papeleo<span class="en">Paperwork management</span></h3>
+          <h3>Gestión de papeleo</h3>
           <p>Organizo, archivo y pongo al día documentación atrasada: facturas, contratos, expedientes... todo en orden y localizable.</p>
-          <p class="en">I organise, file and catch up on backlogged paperwork: invoices, contracts, records... all in order and easy to find.</p>
         </div>
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2Z" stroke-linejoin="round"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
-          <h3>Facturación para autónomos<span class="en">Invoicing for freelancers</span></h3>
+          <h3>Facturación para autónomos</h3>
           <p>Elaboro facturas y notas de entrega, y recopilo tus facturas de gastos e ingresos para que lleguen ordenadas a tu gestor.</p>
-          <p class="en">I prepare invoices and delivery notes, and gather your expense and income invoices so they reach your accountant in order.</p>
         </div>
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4"/></svg></div>
-          <h3>Recados<span class="en">Errands</span></h3>
+          <h3>Recados</h3>
           <p>Bancos, correos, compras puntuales, entregas y gestiones presenciales en Toledo que no puedes o no te apetece hacer tú.</p>
-          <p class="en">Banks, post office, one-off purchases, deliveries and in-person errands in Toledo that you are unable to do yourself or would rather not do.</p>
         </div>
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 9h2M11 9h2M15 9h2M7 12h10"/></svg></div>
-          <h3>Ofimática<span class="en">Office software</span></h3>
+          <h3>Ofimática</h3>
           <p>Documentos, hojas de cálculo, presentaciones y plantillas para que tu negocio funcione con orden desde el primer archivo.</p>
-          <p class="en">Documents, spreadsheets, presentations and templates so your business runs in order from the very first file.</p>
         </div>
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h10l4 4v12.5" stroke-linejoin="round"/><path d="M16 3v4h4"/><path d="m10 15 5-5 2 2-5 5H10Z" stroke-linejoin="round"/></svg></div>
-          <h3>Redacción de documentos<span class="en">Document writing</span></h3>
+          <h3>Redacción de documentos</h3>
           <p>Cartas, instancias, currículums, informes o textos para tu web: redacción clara y bien presentada, lista para enviar.</p>
-          <p class="en">Letters, applications, CVs, reports or website copy: clear, well-presented writing, ready to send.</p>
         </div>
 
         <div class="service">
           <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg></div>
-          <h3>Trámites online<span class="en">Online procedures</span></h3>
+          <h3>Trámites online</h3>
           <p>Sede electrónica, certificado digital, citas previas y gestiones a través de internet, hechas por alguien que ya sabe dónde mirar.</p>
-          <p class="en">Electronic government offices, digital certificates, appointment bookings and online procedures, handled by someone who already knows how to navigate them.</p>
         </div>
 
       </div>
 
       <div class="notice">
-        <div class="notice-tab">Nota / Note</div>
+        <div class="notice-tab">Nota</div>
         <p><strong>Lo que no gestiono yo directamente:</strong> no soy administradora, gestora ni abogada colegiada, así que no realizo trámites que exigen esa colegiación (declaración de la renta, alta de autónomos, nóminas y similares).</p>
-        <p class="en"><strong>What I don't handle directly:</strong> I am not a chartered administrator, accountant or lawyer, so I do not carry out procedures that require that professional licence (income tax returns, freelancer registration, payroll and similar).</p>
         <p><strong>Con quién colaboro:</strong> trabajo habitualmente con despachos de administradores, abogados y gestorías, apoyando en las tareas administrativas que necesiten delegar.</p>
-        <p class="en"><strong>Who I work with:</strong> I regularly collaborate with administrators' firms, lawyers and accounting agencies, supporting the administrative tasks they need to delegate.</p>
       </div>
     </div>
   </section>
@@ -816,27 +762,24 @@
   <section id="como-trabajo" style="background:var(--white); padding-top:0;">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Cómo trabajo<span class="en">How I work</span></span>
-        <h2>Tres pasos, sin complicaciones<span class="en">Three steps, no complications</span></h2>
+        <span class="eyebrow">Cómo trabajo</span>
+        <h2>Tres pasos, sin complicaciones</h2>
       </div>
       <div class="steps">
         <div class="step">
           <span class="num">01</span>
-          <h3>Me cuentas qué necesitas<span class="en">Tell me what you need</span></h3>
+          <h3>Me cuentas qué necesitas</h3>
           <p>Por WhatsApp o email, cuando mejor te venga. Sin formularios largos ni citas previas.</p>
-          <p class="en">By WhatsApp or email, at whatever time suits you. No lengthy forms or appointments required.</p>
         </div>
         <div class="step">
           <span class="num">02</span>
-          <h3>Te digo cómo lo resuelvo<span class="en">I explain how I will proceed</span></h3>
+          <h3>Te digo cómo lo resuelvo</h3>
           <p>Plazos y presupuesto claros antes de empezar. Sin sorpresas ni letra pequeña.</p>
-          <p class="en">Clear timeline and quote before we start. No surprises, no small print.</p>
         </div>
         <div class="step">
           <span class="num">03</span>
-          <h3>Yo me encargo<span class="en">I take it from there</span></h3>
+          <h3>Yo me encargo</h3>
           <p>Tú recuperas tu tiempo. Te aviso de cada paso hasta que quede resuelto.</p>
-          <p class="en">You get your time back. I will keep you informed at every step until the matter is resolved.</p>
         </div>
       </div>
     </div>
@@ -845,24 +788,21 @@
   <section id="para-quien">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Para quién trabajo<span class="en">Who I work with</span></span>
-        <h2>Si tienes algo que gestionar, seguramente pueda ayudarte<span class="en">If there is something that needs managing, I can most likely help</span></h2>
+        <span class="eyebrow">Para quién trabajo</span>
+        <h2>Si tienes algo que gestionar, seguramente pueda ayudarte</h2>
       </div>
       <div class="for-grid">
         <div class="for-card">
-          <h3>Autónomos<span class="en">Freelancers</span></h3>
+          <h3>Autónomos</h3>
           <p>Apoyo administrativo constante para que tú te centres en tu oficio y no en el papeleo que lo rodea.</p>
-          <p class="en">Ongoing administrative support so you can focus on your craft, not the paperwork around it.</p>
         </div>
         <div class="for-card">
-          <h3>Pymes y pequeños negocios<span class="en">SMEs and small businesses</span></h3>
+          <h3>Pymes y pequeños negocios</h3>
           <p>Una secretaria virtual sin coste de contratación fija: solo pagas por la ayuda que necesitas.</p>
-          <p class="en">A virtual assistant with no fixed hiring cost: you only pay for the help you need.</p>
         </div>
         <div class="for-card">
-          <h3>Particulares<span class="en">Individuals</span></h3>
+          <h3>Particulares</h3>
           <p>Trámites, mudanzas o gestiones puntuales del día a día, resueltas por alguien de confianza en Toledo.</p>
-          <p class="en">Everyday procedures, moves or one-off tasks, handled by someone you can trust in Toledo.</p>
         </div>
       </div>
     </div>
@@ -872,10 +812,9 @@
     <div class="wrap">
       <div class="contact-wrap">
         <div class="contact-side">
-          <span class="eyebrow">Hablemos<span class="en">Let's talk</span></span>
-          <h2>Cuéntame qué tienes entre manos<span class="en">Tell me what you need help with</span></h2>
+          <span class="eyebrow">Hablemos</span>
+          <h2>Cuéntame qué tienes entre manos</h2>
           <p>Escríbeme y en poco tiempo te digo cómo puedo ayudarte y qué te costaría. Sin compromiso.</p>
-          <span class="en">Contact me and I will let you know shortly how I can help and what it would cost, with no obligation.</span>
           <div class="zone-tags">
             <span>Toledo capital</span>
             <span>Provincia de Toledo</span>
@@ -884,7 +823,6 @@
 
         <div class="contact-card">
           <p class="no-calls">✍️ Prefiero que me escribas por WhatsApp o email — no atiendo llamadas de teléfono.</p>
-          <span class="en">I prefer to be contacted by WhatsApp or email; I do not take phone calls.</span>
           <div class="contact-line">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/><path d="M12 18h.01"/></svg></span>
             <div>
@@ -902,12 +840,12 @@
           <div class="contact-line">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
             <div>
-              <div class="l">Zona / Area</div>
+              <div class="l">Zona</div>
               <span class="v">Toledo capital y provincia</span>
             </div>
           </div>
           <div style="margin-top:22px;">
-            <a href="https://wa.me/34649476651?text=Hola%20Victoria%2C%20necesito%20ayuda%20con..." class="btn btn-primary" style="width:100%; justify-content:center;">Escríbeme ahora<span class="en">Contact me now</span></a>
+            <a href="https://wa.me/34649476651?text=Hola%20Victoria%2C%20necesito%20ayuda%20con..." class="btn btn-primary" style="width:100%; justify-content:center;">Escríbeme ahora</a>
           </div>
         </div>
       </div>
@@ -920,7 +858,7 @@
   <div class="wrap">
     <div>
       <div class="fname hand" style="font-size:1.6rem;">María Victoria Romero</div>
-      <div class="fmeta">Secretaria virtual · Toledo y provincia<span class="en">Virtual assistant · Toledo and province</span></div>
+      <div class="fmeta">Secretaria virtual · Toledo y provincia</div>
     </div>
     <div class="fmeta">© <span id="year"></span> · 649 476 651 · tusecretariavirtualvictoria@gmail.com</div>
   </div>
