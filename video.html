@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>María Victoria Romero · Presentación en Vídeo</title>
+<meta name="description" content="Conoce en este vídeo cómo puedo ayudarte en la gestión de tu negocio, trámites, papeleo y organización diaria en Toledo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4EFE1;
+    --paper-dark:#E8DFC5;
+    --paper-darker:#DCD0AC;
+    --ink:#212C36;
+    --ink-soft:#4A5561;
+    --teal:#2E5C60;
+    --teal-dark:#20403F;
+    --stamp:#AE3B2E;
+    --gold:#A4772E;
+    --line:#CFC2A0;
+    --white:#FFFDF7;
+    --leaf:#2ECC5A;
+    --leaf-dark:#22A648;
+    --leaf-tint:rgba(46,204,90,0.12);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+
+  .hand{
+    font-family:'Caveat', cursive;
+    font-weight:600;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--teal);
+  }
+
+  a{color:inherit; text-decoration:none;}
+
+  img,svg{display:block; max-width:100%;}
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+    width: 100%;
+  }
+
+  /* Shared avatar / logo mark */
+  .avatar-badge{
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--teal), var(--leaf));
+    color:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Caveat', cursive;
+    font-weight:700;
+    box-shadow:0 6px 14px -6px rgba(46,92,96,0.5);
+    flex-shrink:0;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(244,239,225,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 28px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--ink);
+  }
+  .logo .mark{
+    width:46px; height:46px;
+    font-size:1.3rem;
+  }
+  .logo small{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    font-weight:500;
+    letter-spacing:0.08em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    line-height:1.5;
+    margin-top:2px;
+  }
+  nav.links{display:flex; gap:28px; align-items:center;}
+  nav.links a:not(.btn){
+    font-size:0.92rem;
+    font-weight:500;
+    color:var(--ink-soft);
+    transition:color .15s;
+  }
+  nav.links a:not(.btn):hover, nav.links a:not(.btn):focus-visible{color:var(--teal);}
+
+  .btn{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2px;
+    padding:12px 22px;
+    border-radius:6px;
+    font-weight:600;
+    font-size:0.92rem;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform .15s, box-shadow .15s, background .15s;
+    line-height:1.25;
+  }
+  .btn:focus-visible{outline:2px solid var(--teal); outline-offset:2px;}
+  .btn-primary{
+    background:var(--teal);
+    color:var(--white);
+    box-shadow:0 2px 0 var(--teal-dark);
+  }
+  .btn-primary:hover{transform:translateY(-1px); box-shadow:0 3px 0 var(--teal-dark);}
+  .btn-ghost{
+    background:transparent;
+    border-color:var(--ink);
+    color:var(--ink);
+  }
+  .btn-ghost:hover{background:var(--ink); color:var(--white);}
+  .btn-small{padding:9px 16px; font-size:0.82rem; flex-direction:row;}
+
+  .nav-toggle{
+    display:none;
+    background:none; border:none; cursor:pointer;
+    flex-direction:column; gap:5px; padding:6px;
+  }
+  .nav-toggle span{width:22px; height:2px; background:var(--ink); display:block;}
+
+  /* ---------- MAIN CONTENT ---------- */
+  main{
+    flex-grow: 1;
+  }
+
+  .video-section{
+    padding:64px 0 80px;
+  }
+
+  .section-head{
+    max-width:720px;
+    margin:0 auto 36px;
+    text-align:center;
+  }
+  .section-head .eyebrow{margin-bottom:12px; display:block;}
+  .section-head h1{
+    font-size:clamp(2rem, 4vw, 3rem);
+    line-height:1.15;
+    margin-bottom:14px;
+  }
+  .section-head p{
+    color:var(--ink-soft);
+    font-size:1.08rem;
+    max-width:54ch;
+    margin:0 auto;
+  }
+
+  /* Elegant Folder Card for Video */
+  .video-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:34px;
+    max-width:880px;
+    margin:0 auto;
+    box-shadow:0 8px 24px -12px rgba(33,44,54,0.15);
+    position:relative;
+  }
+  .video-card::before{
+    content:"";
+    position:absolute;
+    top:0; left:34px;
+    width:50px; height:6px;
+    background:var(--teal);
+    border-radius:0 0 4px 4px;
+  }
+
+  /* Responsive Video Wrapper */
+  .video-wrapper{
+    position:relative;
+    width:100%;
+    padding-bottom:56.25%; /* 16:9 Aspect Ratio */
+    height:0;
+    border-radius:8px;
+    overflow:hidden;
+    background:#000;
+    box-shadow:inset 0 0 10px rgba(0,0,0,0.5);
+  }
+  .video-wrapper iframe{
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+
+  .video-actions{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-top:36px;
+  }
+
+  /* Footer */
+  footer{
+    background:var(--ink);
+    color:rgba(255,253,247,0.72);
+    padding:36px 0;
+    margin-top:auto;
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  footer .fname{font-family:'Fraunces', serif; color:var(--white); font-weight:600;}
+  footer .fmeta{font-family:'IBM Plex Mono', monospace; font-size:0.72rem;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:880px){
+    nav.links{
+      position:fixed; top:65px; left:0; right:0;
+      background:var(--paper);
+      border-bottom:1px solid var(--line);
+      flex-direction:column;
+      align-items:flex-start;
+      padding:20px 28px;
+      gap:18px;
+      display:none;
+    }
+    nav.links.open{display:flex;}
+    .nav-toggle{display:flex;}
+    .video-card{padding:20px;}
+    .video-section{padding:44px 0 60px;}
+  }
+  @media (max-width:560px){
+    .logo .hand{font-size:1.4rem !important;}
+    .logo .mark{width:38px; height:38px; font-size:1.05rem;}
+    .video-actions .btn{width:100%; justify-content:center;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo">
+      <span class="mark avatar-badge">MV</span>
+      <span><span class="hand" style="font-size:1.85rem; line-height:1;">María Victoria Romero</span><br><small>Secretaria virtual · Toledo<br>y provincia</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="links" id="navLinks">
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#como-trabajo">Cómo trabajo</a>
+      <a href="index.html#para-quien">Para quién</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="https://wa.me/34649476651?text=Hola%20Victoria%2C%20necesito%20ayuda%20con..." class="btn btn-primary btn-small">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="video-section">
+    <div class="wrap">
+      
+      <div class="section-head">
+        <span class="eyebrow">Vídeo de presentación</span>
+        <h1>Conoce mi trabajo</h1>
+        <p>Te cuento en un minuto cómo puedo ayudarte a liberar tiempo y quitarte de encima las tareas administrativas de tu día a día.</p>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe 
+            src="https://drive.google.com/file/d/12Fzrq7gpBTKfXCkw9SpCrKzUlfujyBWn/preview" 
+            allow="autoplay" 
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div class="video-actions">
+          <a href="https://wa.me/34649476651?text=Hola%20Victoria%2C%20he%20visto%20tu%20video%20y%20necesito%20ayuda%20con..." class="btn btn-primary">Escríbeme por WhatsApp</a>
+          <a href="index.html" class="btn btn-ghost">Volver al inicio</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="fname hand" style="font-size:1.6rem;">María Victoria Romero</div>
+      <div class="fmeta">Secretaria virtual · Toledo y provincia</div>
+    </div>
+    <div class="fmeta">© <span id="year"></span> · 649 476 651 · tusecretariavirtualvictoria@gmail.com</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>
